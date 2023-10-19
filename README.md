@@ -1,2 +1,4 @@
-# GIT-PT-CMD
- Orietação de CMD 
+## GIT-CMD
+ Git commands used in various situations.
+
+ brunosprintdev.github.io/GIT-CMD
