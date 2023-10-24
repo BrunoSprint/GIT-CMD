@@ -96,7 +96,43 @@ usando a sintaxe: git add. - é adicionado todos os arquivos da pasta de uma só
 <strong>'git help -a' e 'git help -g'</strong> - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
 Veja 'git help -command-' ou 'git help -concept-'<br><br>
 Consulte 'git help git' para obter uma visão geral do sistema. </p><BR><BR>
- 
- 
+  
+<h1>GIT</h1>
+<p>
+<strongs>git config:</strongs> Configura opções do Git.
+<strongs>git config --global user.name "Seu Nome":</strongs> Define o nome do usuário.
+<strongs>git config --global user.email "seuemail@example.com":</strongs> Define o e-mail do usuário.
+<h1>Inicialização e Clonagem:</h1>
+<strongs>git init:</strongs> Inicializa um novo repositório Git.
+<strongs>git clone <URL>:</strongs> Clona um repositório remoto para o seu computador.
+<h1>Operações Básicas:</h1>
+<strongs>git add <arquivo>:</strongs> Adiciona alterações de um arquivo à área de staging.
+<strongs>git commit -m "Mensagem":</strongs> Registra as alterações adicionadas na área de staging.
+<strongs>git status:</strongs> Mostra o estado atual do seu repositório.
+<strongs>git log:</strongs> Exibe o histórico de commits.
+<strongs>git diff:</strongs> Mostra as diferenças entre o diretório de trabalho e a área de staging.
+<strongs>git restore <arquivo>:</strongs> Descarta as alterações não adicionadas à área de staging.
+<strongs>git rm <arquivo>:</strongs> Remove um arquivo do repositório e da área de staging.
+<strongs>git mv <antigo_nome> <novo_nome>:</strongs> Renomeia um arquivo no Git.
+Branches:
+<strongs>git branch:</strongs> Lista as branches presentes no repositório.
+<strongs>git checkout <branch>:</strongs> Altera para uma branch específica.
+<strongs>git checkout -b <nova_branch>:</strongs> Cria e muda para uma nova branch.
+<strongs>git merge <branch>:</strongs> Mescla alterações de uma branch para outra.
+<strongs>git rebase <branch>:</strongs> Reorganiza o histórico de commits de uma branch.
+<h1>Atualização Remota:</h1>
+<strongs>git remote -v:</strongs> Lista os repositórios remotos vinculados.
+<strongs>git pull:</strongs> Puxa as alterações do repositório remoto para o seu repositório local.
+<strongs>git push:</strongs> Envia seus commits para o repositório remoto.
+<h1>Desfazendo Alterações:</h1>
+<strongs>git reset:</strongs> Remove arquivos da área de staging sem descartar as alterações.
+<strongs>git reset --hard <commit>:</strongs> Volta para um commit específico, descartando alterações.
+<strongs>git revert <commit>:</strongs> Cria um novo commit que desfaz as alterações de um commit anterior.
+<strongs>git stash:</strongs> Armazena temporariamente as alterações não commitadas.
+<h1>Tags:</h1>
+<strongs>git tag <nome>:</strongs> Cria uma tag para um commit específico.
+<strongs>git tag -a <nome> -m "Mensagem":</strongs> Cria uma tag anotada com uma mensagem.</p>
+
+
     </body>
 </html>
