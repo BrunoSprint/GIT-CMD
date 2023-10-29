@@ -94,8 +94,8 @@ usando a sintaxe: git add. - é adicionado todos os arquivos da pasta de uma só
 <strong>pull</strong> - Busque e integre com outro repositório ou uma filial local. <BR><BR>
 <strong>push</strong> - Atualize refs remotas junto com objetos associados. <BR><BR>
 <strong>'git help -a' e 'git help -g'</strong> - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
-Veja 'git help -command-' ou 'git help -concept-'<br><br>
-Consulte 'git help git' para obter uma visão geral do sistema. </p><BR><BR>
+Veja 'git help -command-' ou 'git help -concept-'<br>
+Consulte 'git help git' para obter uma visão geral do sistema. </p>
   
 <h1>GIT</h1>
 <p>
@@ -164,6 +164,54 @@ Consulte 'git help git' para obter uma visão geral do sistema. </p><BR><BR>
   
 <strongs>git tag -a <nome> -m "Mensagem":</strongs> Cria uma tag anotada com uma mensagem.</p>
 
+
+
+  <h1>  usage: git rev-list [<options>] <commit>... [--] [<path>...]</h1>
+
+        <strong>limiting output:</strong><br><br>
+
+          --max-count=<n><br>
+          --max-age=<epoch><br>
+          --min-age=<epoch><br>
+          --sparse<br>
+          --no-merges<br>
+          --min-parents=<n><br>
+          --no-min-parents<br>
+          --max-parents=<n><br>
+          --no-max-parents<br>
+          --remove-empty<br>
+          --all<br>
+          --branches<br>
+          --tags<br>
+          --remotes<br>
+          --stdin<br>
+          --exclude-hidden=[fetch|receive|uploadpack]<br>
+          --quiet<br><br>
+
+        <strong>ordering output:</strong>
+          --topo-order<br>
+          --date-order<br>
+          --reverse<br><br>
+          
+        <strong>formatting output:</strong>
+          --parents<br>
+          --children<br>
+          --objects | --objects-edge<br>
+          --disk-usage[=human]<br>
+          --unpacked<br>
+          --header | --pretty<br>
+          --[no-]object-names<br>
+          --abbrev=<n> | --no-abbrev<br>
+          --abbrev-commit<br>
+          --left-right<br>
+          --count<br><br>
+        
+        
+          <strong>special purpose:</strong>
+          --bisect<br>
+          --bisect-vars<br>
+          --bisect-all<br>
+      
 
     </body>
 </html>
