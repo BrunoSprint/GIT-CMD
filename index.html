@@ -190,7 +190,7 @@ Consulte 'git help git' para obter uma visão geral do sistema. </p>
 
         <strong>ordering output:</strong>
           --topo-order<br>
-          --date-order<br>
+          --date-order<br>.
           --reverse<br><br>
           
         <strong>formatting output:</strong>
@@ -211,6 +211,76 @@ Consulte 'git help git' para obter uma visão geral do sistema. </p>
           --bisect<br>
           --bisect-vars<br>
           --bisect-all<br>
+
+
+          
+<h1>usage: git clone [<options>] [--] <repo> [<dir>]</h1>
+
+  -v, --verbose         be more verbose<br><br>
+  -q, --quiet           be more quiet<br><br>
+  --progress            force progress reporting<br><br>
+  --reject-shallow      don't clone shallow repository<br><br>
+  -n, --no-checkout     don't create a checkout<br><br>
+  --bare                create a bare repository<br><br>
+  --mirror              create a mirror repository (implies bare)<br><br>
+  -l, --local           to clone from a local repository<br><br>
+  --no-hardlinks        don't use local hardlinks, always copy<br><br>
+  -s, --shared          setup as shared repository<br><br>
+  --recurse-submodules[=<pathspec>]<br><br>
+                        
+    
+  <h1>  initialize submodules in the clone</h1>
+  --recursive ...       alias of --recurse-submodules<br><br>
+  -j, --jobs <n>        number of submodules cloned in parallel<br><br>
+  --template <template-directory><br><br>
+                        
+    
+    <h1>directory from which templates will be used</h1>
+  --reference <repo>    reference repository<br><br>
+  --reference-if-able <repo><br><br>
+                        
+    
+    <h1>reference repository</h1>
+  --dissociate          use --reference only while cloning<br><br>
+  -o, --origin <name>   use <name> instead of 'origin' to track upstream<br><br>
+  -b, --branch <branch> checkout <branch> instead of the remote's HEAD<br><br>
+  -u, --upload-pack <path><br><br>
+                        
+    
+    <h1>path to git-upload-pack on the remote</h1>
+  --depth <depth>       create a shallow clone of that depth<br><br>
+  --shallow-since <time><br><br>
+                        
+    
+    <h1>create a shallow clone since a specific time</h1>
+  --shallow-exclude <revision><br><br>
+                        
+    <h1>deepen history of shallow clone, excluding rev</h1>
+  --single-branch       clone only one branch, HEAD or --branch<br><br>
+  --no-tags             don't clone any tags, and make later fetches not to follow them<br><br>
+  --shallow-submodules  any cloned submodules will be shallow<br><br>
+  --separate-git-dir <gitdir><br><br>
+                        
+    <h1>separate git dir from working tree</h1>
+  -c, --config <key=value><br><br>
+                        
+  
+  <h1>set config inside the new repository</h1>
+  --server-option <server-specific><br><br>
+                        
+    
+    <h1>option to transmit</h1>
+  -4, --ipv4            use IPv4 addresses only<br><br>
+  -6, --ipv6            use IPv6 addresses only<br><br>
+  --filter <args>       object filtering<br><br>
+  --also-filter-submodules<br><br>
+  
+  
+  <h1>apply partial clone filters to submodules</h1>
+  --remote-submodules   any cloned submodules will use their remote-tracking branch<br><br>
+  --sparse              initialize sparse-checkout file to include only files at root<br><br>
+  --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote<br><br>
+
       
 
     </body>
