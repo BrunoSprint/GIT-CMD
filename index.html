@@ -281,6 +281,52 @@ Consulte 'git help git' para obter uma visão geral do sistema. </p>
   --sparse              initialize sparse-checkout file to include only files at root<br><br>
   --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote<br><br>
 
+
+<h1>      usage: git config [<options>] </h1>
+
+<h2>Config file location</h2>
+    --global              use global config file<br>
+    --system              use system config file<br>
+    --local               use repository config file<br>
+    --worktree            use per-worktree config file<br>
+    -f, --file <file>     use given config file<br>
+    --blob <blob-id>      read config from given blob object<br><br>
+
+<h2>Action</h2>
+    --get                 get value: name [value-pattern]<br>
+    --get-all             get all values: key [value-pattern]<br>
+    --get-regexp          get values for regexp: name-regex [value-pattern]<br>
+    --get-urlmatch        get value specific for the URL: section[.var] URL<br>
+    --replace-all         replace all matching variables: name value [value-pattern]<br>
+    --add                 add a new variable: name value<br>
+    --unset               remove a variable: name [value-pattern]<br>
+    --unset-all           remove all matches: name [value-pattern]<br>
+    --rename-section      rename section: old-name new-name<br>
+    --remove-section      remove a section: name<br>
+    -l, --list            list all<br>
+    --fixed-value         use string equality when comparing values to 'value-pattern'<br>
+    -e, --edit            open an editor<br>
+    --get-color           find the color configured: slot [default]<br>
+    --get-colorbool       find the color setting: slot [stdout-is-tty]<br><br>
+
+<h2>Type</h2>
+    -t, --type <type>     value is given this type<br>
+    --bool                value is "true" or "false"<br>
+    --int                 value is decimal number<br>
+    --bool-or-int         value is --bool or --int<br>
+    --bool-or-str         value is --bool or string<br>
+    --path                value is a path (file or directory name)<br>
+    --expiry-date         value is an expiry date<br><br>
+
+<h2>Other</h2>
+    -z, --null            terminate values with NUL byte<br>
+    --name-only           show variable names only<br>
+    --includes            respect include directives on lookup<br>
+    --show-origin         show origin of config (file, standard input, blob, command line)<br>
+    --show-scope          show scope of config (worktree, local, global, system, command)<br>
+    --default <value>     with --get, use default value when missing entry<br><br>
+
+
       
 
     </body>
