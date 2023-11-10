@@ -53,118 +53,6 @@ See 'git help -command-' or 'git help -concept-'<br><br>
 See 'git help git' for an overview of the system.</p><BR><BR>
 
 
-         <h1>comandos Git usados em várias situações:</h1><br><br>
- 
-
-<p><h1>Git</h1>
-<strong> clone</strong> - Clone um repositório em um novo diretório. <BR><BR>
-<strong>init</strong> - Crie um repositório Git vazio ou reinicialize um existente. </p><BR><BR>
- 
-  
-<p><h1> Trabalhe na mudança atual. </h1>
-<strong>add</strong> - Adicione o conteúdo do arquivo ao índice. <BR><BR>
-usando a sintaxe: git add. - é adicionado todos os arquivos da pasta de uma só vez. <BR><BR>
-<strong>mv</strong> - Mover ou renomear um arquivo, um diretório ou um link simbólico. <BR><BR>
-<strong>restore</strong> - Restaura arquivos de árvore de trabalho. <BR><BR>
-<strong>rm</strong> - Remova arquivos da árvore de trabalho e do índice. </p><BR><BR>
- 
-
-
-<p><h1>Examine a história e o estado. </h1>
-<strong>bisset</strong> - Use a pesquisa binária para encontrar a confirmação que introduziu um bug. <BR><BR>
-<strong>diff</strong> - Mostrar alterações entre commits, commit e árvore de trabalho, etc.<BR><BR>
-<strong>grep</strong> - Imprima linhas correspondentes a um padrão. <BR><BR>
-<strong>log</strong> - Mostrar logs de confirmação. <BR><BR>
-<strong>show</strong> - Mostrar vários tipos de objetos. <BR><BR>
-<strong>status</strong> - Mostra o status da árvore de trabalho. </p><BR><BR>
- 
-
-
-
-<p><h1>crescer, marcar e ajustar sua história comum</h1>
-<strong>branch</strong> - Liste, crie ou exclua ramificações. <BR><BR>
-<strong>commit</strong> - Registre as alterações no repositório. <BR><BR>
-<strong>merge</strong> - Junte dois ou mais históricos de desenvolvimento. <BR><BR>
-<strong>rebase</strong> - Reaplique commits em cima de outra dica base. <BR><BR>
-<strong>reset</strong> - Redefina o HEAD atual para o estado especificado. <BR><BR>
-<strong>switch</strong> - Troca de ramos. <BR><BR>
-<strong>tag</strong> - Crie, liste, exclua ou verifique um objeto de tag assinado com GPG. <BR><BR>
-<strong>collaborate</strong> - (Veja também: Fluxos de trabalho de Ajuda do Git)<br><br>
-<strong>fetch</strong> - Baixar objetos e refs de outro repositório. <BR><BR>
-<strong>pull</strong> - Busque e integre com outro repositório ou uma filial local. <BR><BR>
-<strong>push</strong> - Atualize refs remotas junto com objetos associados. <BR><BR>
-<strong>'git help -a' e 'git help -g'</strong> - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
-Veja 'git help -command-' ou 'git help -concept-'<br>
-Consulte 'git help git' para obter uma visão geral do sistema. </p>
-  
-<h1>GIT</h1>
-<p>
-<strongs>git config:</strongs> Configura opções do Git.<BR><BR>
-  
-<strongs>git config --global user.name "Seu Nome":</strongs> Define o nome do usuário.<BR><BR>
-  
-<strongs>git config --global user.email "seuemail@example.com":</strongs> Define o e-mail do usuário.<BR><BR>
-  
-<h1>Inicialização e Clonagem:</h1>
-
-<strongs>git init:</strongs> Inicializa um novo repositório Git.<BR><BR>
-  
-<strongs>git clone <URL>:</strongs> Clona um repositório remoto para o seu computador.<BR><BR>
-  
-<h1>Operações Básicas:</h1>
-
-<strongs>git add <arquivo>:</strongs> Adiciona alterações de um arquivo à área de staging.<BR><BR>
-  
-<strongs>git commit -m "Mensagem":</strongs> Registra as alterações adicionadas na área de staging.<BR><BR>
-  
-<strongs>git status:</strongs> Mostra o estado atual do seu repositório.<BR><BR>
-  
-<strongs>git log:</strongs> Exibe o histórico de commits.<BR><BR>
-  
-<strongs>git diff:</strongs> Mostra as diferenças entre o diretório de trabalho e a área de staging.<BR><BR>
-  
-<strongs>git restore <arquivo>:</strongs> Descarta as alterações não adicionadas à área de staging.<BR><BR>
-  
-<strongs>git rm <arquivo>:</strongs> Remove um arquivo do repositório e da área de staging.<BR><BR>
-  
-<strongs>git mv <antigo_nome> <novo_nome>:</strongs> Renomeia um arquivo no Git.<BR><BR>
-  
-<h1>Branches:</h1>
-
-<strongs>git branch:</strongs> Lista as branches presentes no repositório.<BR><BR>
-  
-<strongs>git checkout <branch>:</strongs> Altera para uma branch específica.<BR><BR>
-  
-<strongs>git checkout -b <nova_branch>:</strongs> Cria e muda para uma nova branch.<BR><BR>
-  
-<strongs>git merge <branch>:</strongs> Mescla alterações de uma branch para outra.<BR><BR>
-  
-<strongs>git rebase <branch>:</strongs> Reorganiza o histórico de commits de uma branch.<BR><BR>
-  
-<h1>Atualização Remota:</h1>
-
-<strongs>git remote -v:</strongs> Lista os repositórios remotos vinculados.<BR><BR>
-  
-<strongs>git pull:</strongs> Puxa as alterações do repositório remoto para o seu repositório local.<BR><BR>
-  
-<strongs>git push:</strongs> Envia seus commits para o repositório remoto.<BR><BR>
-  
-<h1>Desfazendo Alterações:</h1>
-
-<strongs>git reset:</strongs> Remove arquivos da área de staging sem descartar as alterações.<BR><BR>
-  
-<strongs>git reset --hard <commit>:</strongs> Volta para um commit específico, descartando alterações.<BR><BR>
-  
-<strongs>git revert <commit>:</strongs> Cria um novo commit que desfaz as alterações de um commit anterior.<BR><BR>
-  
-<strongs>git stash:</strongs> Armazena temporariamente as alterações não commitadas.<BR><BR>
-  
-<h1>Tags:</h1>
-<strongs>git tag <nome>:</strongs> Cria uma tag para um commit específico.<BR><BR>
-  
-<strongs>git tag -a <nome> -m "Mensagem":</strongs> Cria uma tag anotada com uma mensagem.</p>
-
-
 
   <h1>  usage: git rev-list [<options>] <commit>... [--] [<path>...]</h1>
 
@@ -324,10 +212,123 @@ Consulte 'git help git' para obter uma visão geral do sistema. </p>
     --includes            respect include directives on lookup<br>
     --show-origin         show origin of config (file, standard input, blob, command line)<br>
     --show-scope          show scope of config (worktree, local, global, system, command)<br>
-    --default <value>     with --get, use default value when missing entry<br><br>
+    --default <value>     with --get, use default value when missing entry<br><br>      
 
 
-      
+
+<h1>PT-BR<br>
+Comandos Git usados em várias situações:</h1>
+        
+<p><h1>Git</h1>
+<strong> clone</strong> - Clone um repositório em um novo diretório. <BR><BR>
+<strong>init</strong> - Crie um repositório Git vazio ou reinicialize um existente. </p><BR><BR>
+ 
+  
+<p><h1> Trabalhe na mudança atual. </h1>
+<strong>add</strong> - Adicione o conteúdo do arquivo ao índice. <BR><BR>
+usando a sintaxe: git add. - é adicionado todos os arquivos da pasta de uma só vez. <BR><BR>
+<strong>mv</strong> - Mover ou renomear um arquivo, um diretório ou um link simbólico. <BR><BR>
+<strong>restore</strong> - Restaura arquivos de árvore de trabalho. <BR><BR>
+<strong>rm</strong> - Remova arquivos da árvore de trabalho e do índice. </p><BR><BR>
+ 
+
+
+<p><h1>Examine a história e o estado. </h1>
+<strong>bisset</strong> - Use a pesquisa binária para encontrar a confirmação que introduziu um bug. <BR><BR>
+<strong>diff</strong> - Mostrar alterações entre commits, commit e árvore de trabalho, etc.<BR><BR>
+<strong>grep</strong> - Imprima linhas correspondentes a um padrão. <BR><BR>
+<strong>log</strong> - Mostrar logs de confirmação. <BR><BR>
+<strong>show</strong> - Mostrar vários tipos de objetos. <BR><BR>
+<strong>status</strong> - Mostra o status da árvore de trabalho. </p><BR><BR>
+ 
+
+
+
+<p><h1>crescer, marcar e ajustar sua história comum</h1>
+<strong>branch</strong> - Liste, crie ou exclua ramificações. <BR><BR>
+<strong>commit</strong> - Registre as alterações no repositório. <BR><BR>
+<strong>merge</strong> - Junte dois ou mais históricos de desenvolvimento. <BR><BR>
+<strong>rebase</strong> - Reaplique commits em cima de outra dica base. <BR><BR>
+<strong>reset</strong> - Redefina o HEAD atual para o estado especificado. <BR><BR>
+<strong>switch</strong> - Troca de ramos. <BR><BR>
+<strong>tag</strong> - Crie, liste, exclua ou verifique um objeto de tag assinado com GPG. <BR><BR>
+<strong>collaborate</strong> - (Veja também: Fluxos de trabalho de Ajuda do Git)<br><br>
+<strong>fetch</strong> - Baixar objetos e refs de outro repositório. <BR><BR>
+<strong>pull</strong> - Busque e integre com outro repositório ou uma filial local. <BR><BR>
+<strong>push</strong> - Atualize refs remotas junto com objetos associados. <BR><BR>
+<strong>'git help -a' e 'git help -g'</strong> - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
+Veja 'git help -command-' ou 'git help -concept-'<br>
+Consulte 'git help git' para obter uma visão geral do sistema. </p>
+  
+<h1>GIT</h1>
+<p>
+<strongs>git config:</strongs> Configura opções do Git.<BR><BR>
+  
+<strongs>git config --global user.name "Seu Nome":</strongs> Define o nome do usuário.<BR><BR>
+  
+<strongs>git config --global user.email "seuemail@example.com":</strongs> Define o e-mail do usuário.<BR><BR>
+  
+<h1>Inicialização e Clonagem:</h1>
+
+<strongs>git init:</strongs> Inicializa um novo repositório Git.<BR><BR>
+  
+<strongs>git clone <URL>:</strongs> Clona um repositório remoto para o seu computador.<BR><BR>
+  
+<h1>Operações Básicas:</h1>
+
+<strongs>git add <arquivo>:</strongs> Adiciona alterações de um arquivo à área de staging.<BR><BR>
+  
+<strongs>git commit -m "Mensagem":</strongs> Registra as alterações adicionadas na área de staging.<BR><BR>
+  
+<strongs>git status:</strongs> Mostra o estado atual do seu repositório.<BR><BR>
+  
+<strongs>git log:</strongs> Exibe o histórico de commits.<BR><BR>
+  
+<strongs>git diff:</strongs> Mostra as diferenças entre o diretório de trabalho e a área de staging.<BR><BR>
+  
+<strongs>git restore <arquivo>:</strongs> Descarta as alterações não adicionadas à área de staging.<BR><BR>
+  
+<strongs>git rm <arquivo>:</strongs> Remove um arquivo do repositório e da área de staging.<BR><BR>
+  
+<strongs>git mv <antigo_nome> <novo_nome>:</strongs> Renomeia um arquivo no Git.<BR><BR>
+  
+<h1>Branches:</h1>
+
+<strongs>git branch:</strongs> Lista as branches presentes no repositório.<BR><BR>
+  
+<strongs>git checkout <branch>:</strongs> Altera para uma branch específica.<BR><BR>
+  
+<strongs>git checkout -b <nova_branch>:</strongs> Cria e muda para uma nova branch.<BR><BR>
+  
+<strongs>git merge <branch>:</strongs> Mescla alterações de uma branch para outra.<BR><BR>
+  
+<strongs>git rebase <branch>:</strongs> Reorganiza o histórico de commits de uma branch.<BR><BR>
+  
+<h1>Atualização Remota:</h1>
+
+<strongs>git remote -v:</strongs> Lista os repositórios remotos vinculados.<BR><BR>
+  
+<strongs>git pull:</strongs> Puxa as alterações do repositório remoto para o seu repositório local.<BR><BR>
+  
+<strongs>git push:</strongs> Envia seus commits para o repositório remoto.<BR><BR>
+  
+<h1>Desfazendo Alterações:</h1>
+
+<strongs>git reset:</strongs> Remove arquivos da área de staging sem descartar as alterações.<BR><BR>
+  
+<strongs>git reset --hard <commit>:</strongs> Volta para um commit específico, descartando alterações.<BR><BR>
+  
+<strongs>git revert <commit>:</strongs> Cria um novo commit que desfaz as alterações de um commit anterior.<BR><BR>
+  
+<strongs>git stash:</strongs> Armazena temporariamente as alterações não commitadas.<BR><BR>
+  
+<h1>Tags:</h1>
+<strongs>git tag <nome>:</strongs> Cria uma tag para um commit específico.<BR><BR>
+  
+<strongs>git tag -a <nome> -m "Mensagem":</strongs> Cria uma tag anotada com uma mensagem.</p>
+
+  
+  
 
     </body>
 </html>
