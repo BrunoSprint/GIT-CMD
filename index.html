@@ -14,11 +14,18 @@
 <p><h1>Git</h1>
 <strong> clone</strong>  -   Clone a repository into a new directory.<BR><BR>
 <strong>init</strong>   -   Create an empty Git repository or reinitialize an existing one.</p><BR><BR>
- 
+
+
+<strongs>git config:</strongs> Configura opções do Git.<BR><BR>
+  
+<strongs>git config --global user.name "Seu Nome":</strongs> Define o nome do usuário.<BR><BR>
+  
+<strongs>git config --global user.email "seuemail@example.com":</strongs> Define o e-mail do usuário.<BR><BR>
+   
   
 <p><h1> Work on the current change.</h1>
 <strong>add</strong>  -     Add file contents to the index.<BR><BR>
-usando a sintaxe: git add.  -    é adicionado todos os arquivos da pasta de uma só vez.<BR><BR>
+Using the syntax: git add. - all files in the folder are added at once.<BR><BR>
 <strong>mv</strong>  -      Move or rename a file, a directory, or a symlink.<BR><BR>
 <strong>restore</strong> -  Restore working tree files.<BR><BR>
 <strong>rm</strong>   -     Remove files from the working tree and from the index.</p><BR><BR>
@@ -56,8 +63,7 @@ See 'git help git' for an overview of the system.</p><BR><BR>
 
   <h1>  usage: git rev-list [<options>] <commit>... [--] [<path>...]</h1>
 
-        <strong>limiting output:</strong><br><br>
-
+        <strong>Limiting Output:</strong><br>
           --max-count=<n><br>
           --max-age=<epoch><br>
           --min-age=<epoch><br>
@@ -76,12 +82,12 @@ See 'git help git' for an overview of the system.</p><BR><BR>
           --exclude-hidden=[fetch|receive|uploadpack]<br>
           --quiet<br><br>
 
-        <strong>ordering output:</strong>
+        <strong>Ordering Output:</strong><br>
           --topo-order<br>
           --date-order<br>.
           --reverse<br><br>
           
-        <strong>formatting output:</strong>
+        <strong>Formatting Output:</strong><br>
           --parents<br>
           --children<br>
           --objects | --objects-edge<br>
@@ -95,7 +101,7 @@ See 'git help git' for an overview of the system.</p><BR><BR>
           --count<br><br>
         
         
-          <strong>special purpose:</strong>
+          <strong>Special Purpose:</strong><br>
           --bisect<br>
           --bisect-vars<br>
           --bisect-all<br>
@@ -103,7 +109,6 @@ See 'git help git' for an overview of the system.</p><BR><BR>
 
           
 <h1>usage: git clone [<options>] [--] <repo> [<dir>]</h1>
-
   -v, --verbose         be more verbose<br><br>
   -q, --quiet           be more quiet<br><br>
   --progress            force progress reporting<br><br>
@@ -117,18 +122,18 @@ See 'git help git' for an overview of the system.</p><BR><BR>
   --recurse-submodules[=<pathspec>]<br><br>
                         
     
-  <h1>  initialize submodules in the clone</h1>
+  <h1>  Initialize Submodules in the Clone</h1>
   --recursive ...       alias of --recurse-submodules<br><br>
   -j, --jobs <n>        number of submodules cloned in parallel<br><br>
   --template <template-directory><br><br>
                         
     
-    <h1>directory from which templates will be used</h1>
+    <h1>Directory from which templates will be used</h1>
   --reference <repo>    reference repository<br><br>
   --reference-if-able <repo><br><br>
                         
     
-    <h1>reference repository</h1>
+    <h1>Reference Repository</h1>
   --dissociate          use --reference only while cloning<br><br>
   -o, --origin <name>   use <name> instead of 'origin' to track upstream<br><br>
   -b, --branch <branch> checkout <branch> instead of the remote's HEAD<br><br>
@@ -140,7 +145,7 @@ See 'git help git' for an overview of the system.</p><BR><BR>
   --shallow-since <time><br><br>
                         
     
-    <h1>create a shallow clone since a specific time</h1>
+    <h1>Create a shallow clone since a specific time</h1>
   --shallow-exclude <revision><br><br>
                         
     <h1>deepen history of shallow clone, excluding rev</h1>
@@ -170,7 +175,7 @@ See 'git help git' for an overview of the system.</p><BR><BR>
   --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote<br><br>
 
 
-<h1>      usage: git config [<options>] </h1>
+<h1>  Git Config [<options>] </h1>
 
 <h2>Config file location</h2>
     --global              use global config file<br>
@@ -234,40 +239,67 @@ usando a sintaxe: git add. - é adicionado todos os arquivos da pasta de uma só
 
 
 <p><h1>Examine a história e o estado. </h1>
-<strong>bisset</strong> - Use a pesquisa binária para encontrar a confirmação que introduziu um bug. <BR><BR>
-<strong>diff</strong> - Mostrar alterações entre commits, commit e árvore de trabalho, etc.<BR><BR>
-<strong>grep</strong> - Imprima linhas correspondentes a um padrão. <BR><BR>
-<strong>log</strong> - Mostrar logs de confirmação. <BR><BR>
-<strong>show</strong> - Mostrar vários tipos de objetos. <BR><BR>
-<strong>status</strong> - Mostra o status da árvore de trabalho. </p><BR><BR>
- 
-
-
-
-<p><h1>crescer, marcar e ajustar sua história comum</h1>
-<strong>branch</strong> - Liste, crie ou exclua ramificações. <BR><BR>
-<strong>commit</strong> - Registre as alterações no repositório. <BR><BR>
-<strong>merge</strong> - Junte dois ou mais históricos de desenvolvimento. <BR><BR>
-<strong>rebase</strong> - Reaplique commits em cima de outra dica base. <BR><BR>
-<strong>reset</strong> - Redefina o HEAD atual para o estado especificado. <BR><BR>
-<strong>switch</strong> - Troca de ramos. <BR><BR>
-<strong>tag</strong> - Crie, liste, exclua ou verifique um objeto de tag assinado com GPG. <BR><BR>
-<strong>collaborate</strong> - (Veja também: Fluxos de trabalho de Ajuda do Git)<br><br>
-<strong>fetch</strong> - Baixar objetos e refs de outro repositório. <BR><BR>
-<strong>pull</strong> - Busque e integre com outro repositório ou uma filial local. <BR><BR>
-<strong>push</strong> - Atualize refs remotas junto com objetos associados. <BR><BR>
-<strong>'git help -a' e 'git help -g'</strong> - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
+<strong>bisset</strong><br>
+   - Use a pesquisa binária para encontrar a confirmação que introduziu um bug. <BR><BR>
+    
+<strong>diff</strong><br>
+   - Mostrar alterações entre commits, commit e árvore de trabalho, etc.<BR><BR>
+    
+<strong>grep</strong><br>
+   - Imprima linhas correspondentes a um padrão. <BR><BR>
+    
+<strong>log</strong><br>
+   - Mostrar logs de confirmação. <BR><BR>
+    
+<strong>show</strong><br>
+   - Mostrar vários tipos de objetos. <BR><BR>
+    
+<strong>status</strong><br>
+   - Mostra o status da árvore de trabalho. </p><BR><BR>
+    
+<p>
+<h1>crescer, marcar e ajustar sua história comum</h1>
+<strong>branch</strong><br>
+   - Liste, crie ou exclua ramificações. <BR><BR>
+    
+<strong>commit</strong><br>
+   - Registre as alterações no repositório. <BR><BR>
+    
+<strong>merge</strong><br>
+   - Junte dois ou mais históricos de desenvolvimento. <BR><BR>
+    
+<strong>rebase</strong><br>
+   - Reaplique commits em cima de outra dica base. <BR><BR>
+    
+<strong>reset</strong><br>
+   - Redefina o HEAD atual para o estado especificado. <BR><BR>
+    
+<strong>switch</strong><br>
+   - Troca de ramos. <BR><BR>
+    
+<strong>tag</strong><br>
+   - Crie, liste, exclua ou verifique um objeto de tag assinado com GPG. <BR><BR>
+    
+<strong>collaborate</strong><br>
+   - (Veja também: Fluxos de trabalho de Ajuda do Git)<br><br>
+    
+<strong>fetch</strong><br>
+   - Baixar objetos e refs de outro repositório. <BR><BR>
+    
+<strong>pull</strong><br>
+   - Busque e integre com outro repositório ou uma filial local. <BR><BR>
+    
+<strong>push</strong><br>
+   - Atualize refs remotas junto com objetos associados. <BR><BR>
+    
+<strong>'git help -a' e 'git help -g'</strong><br>
+   - listam os subcomandos disponíveis e alguns guias conceituais. <BR><BR>
+    
 Veja 'git help -command-' ou 'git help -concept-'<br>
 Consulte 'git help git' para obter uma visão geral do sistema. </p>
   
 <h1>GIT</h1>
 <p>
-<strongs>git config:</strongs> Configura opções do Git.<BR><BR>
-  
-<strongs>git config --global user.name "Seu Nome":</strongs> Define o nome do usuário.<BR><BR>
-  
-<strongs>git config --global user.email "seuemail@example.com":</strongs> Define o e-mail do usuário.<BR><BR>
-  
 <h1>Inicialização e Clonagem:</h1>
 
 <strongs>git init:</strongs> Inicializa um novo repositório Git.<BR><BR>
