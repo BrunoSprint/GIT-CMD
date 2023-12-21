@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Git Config</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+
+   <h1>Git config<br>
+   Como configurar seus repositórios?</h1>
+   
+    
+    Se você mexe ou anteriormente mexeu com o Git, já deve ter ouvido falar do git config. Um poderoso comando que, além de armazenar as informações sobre você no Git, como o e-mail e o seu nome, consegue criar “apelidos” para os seus comandos e até mesmo trocar a cor das ações do Git.
+    
+    O git config é um dos comandos mais fortes do ecossistema Git, no entanto, não é tão simples mexer com ele. Em alguns casos, podemos configurar informações incorretas e acabar fazendo alterações em repositórios privados que necessitam de um e-mail do trabalho, por exemplo.
+    
+    Sendo assim, mostraremos para você a melhor forma de configurar o Git com as suas melhores opções. Além disso, mostraremos a customização e como ele pode tornar o seu fluxo de trabalho muito mais ágil e eficaz. Ficou curioso para aprender mais sobre o Git Config? Então continue a leitura do nosso post:
+    Índice
+    
+        01 | O que é o Git Config e para que serve?
+        02 | Quais os níveis de configuração do Git Config?
+        03 | Configurando o seu Git com o Git Config!
+        04 | Opções para usar com Git Config
+    
+    O que é o Git Config e para que serve?
+    
+    Entre muitos comandos do Git temos um dos mais famosos, que é o git config. Ele tem a finalidade principal de definir valores de configuração para o Git em nível global ou local. Quando o comando é executado, você modifica o arquivo de texto de configurações que está localizado no seu pc. 
+    
+    Podemos configurar informações globais como e-mail, nome de usuário e o editor de texto padrão. Também temos os aliases, que permitem a criação de atalhos para comandos do Git que usamos com muita regularidade. Por fim, é possível customizar as cores de saída do terminal para qualquer ação do Git e também mudar o programa que executa o merge de arquivos.
+    Quais os níveis de configuração do Git Config?
+    
+    No comando de git config temos uma ordem de prioridade para os níveis de configuração, sendo eles: local, global e sistema. No momento que forem requisitados quaisquer informações para o Git, ele procurará esses valores nesses locais, ou seja, comando no nível mais baixo (local) e indo até o mais alto (sistema).
+    
+    Sem mais delongas, vamos entender as diferenças entre esses três níveis:
+    
+        Nível local: –local:
+    
+    Quando estiver trabalhando em um projeto com o git, na hora de utilizar o comando git config, todas as informações serão gravadas localmente. Sendo assim, as configurações do –local são aplicadas apenas para o repositório que chamou esse comando. Se você ficou curioso para saber em qual local essas configurações são guardadas, apenas vá para o diretório .git e abra o arquivo config:
+    Configuração de um nome de usuário com git config
+    (Aqui configuramos um nome de usuário e logo
+    depois utilizamos o comando cat para
+    mostrar o conteúdo do arquivo)
+    
+        Nível global: –global
+    
+    As configurações globais são usadas pelo usuário do seu sistema operacional. São informações que serão usadas caso você não tenha definido nenhum no seu repositório local. A localização desse arquivo em sistemas Unix (macOS e Linux) fica no ~/.gitconfig e C:/Users/{nome_do_usuario}/.gitconfig no Windows.
+    
+        Nível do sistema: –system
+    
+    A última, mas não menos importante, é a configuração em nível de sistema. Ela atinge todos os usuários do seu sistema operacional e todos os repositórios. Para encontrar esse arquivo é um pouco mais chato, mas não impossível. No Linux fica localizado em /etc/gitconfig. Já no macOS encontramos o arquivo em /usr/local/git/etc/gitconfig e por fim, temos o Windows, que fica em C:\Program Files\Git\etc\gitconfig.
+    Configurando o seu Git com o Git Config! 
+    Meme sobre git config
+    “Commitei para o GitHub — Esqueci de configurar o git –config para meu usuário e email”
+    
+    Para que não ocorra o mesmo problema da imagem, mostraremos para você todas as principais formas de configurar o seu Git.
+    Configurando sua identidade: nome de usuário e email
+    
+    Na maioria das vezes, após a instalação do Git, a primeira configuração é a do nome de usuário e e-mail, sendo elas valores globais. No entanto, você pode mudar essas informações a qualquer momento, seja globalmente ou localmente. Vale ressaltar que os comandos do Git funcionam em qualquer terminal, seja ele Windows, macOs ou Linux.
+    
+    No seu terminal de preferência, digite o seu nome e o seu e-mail:
+    
+    git config --global user.name "Primeiro_nome Segundo_nome"
+    git config --global user.email teste@example.com
+    
+    Para definir valores locais, apenas remova o –global do comando:
+    
+    git config user.name "Primeiro_nome Segundo_nome"
+    git config user.email teste@example.com
+    
+    Os nomes que utilizamos formam uma espécie de árvore, que contém uma hierarquia formada por “seções” e “chaves”. Podemos ver a seguir a criação de um novo usuário e a forma que é mostrada tanto no console como no arquivo de configuração:
+    Demonstração das seções e chaves no git config
+    Arquivo de configuração
+    Configurando seu editor de texto
+    
+    Em alguns momentos da sua utilização do Git você se deparará com a abertura de um editor de texto. Por padrão, o vim vem definido, porém, você pode e deve alterar o seu editor de texto. No nosso caso, recomendamos o Visual Studio Code.
+    
+    Se você quer saber se o seu editor de texto favorito está disponível para ser definido nessa configuração, abaixo temos uma relação de editores e os respectivos comandos que devem ser executados:
+    Tabelas com editores de textos compatíveis com git
+    Aliases: criando atalhos para comandos
+    
+    Caso já tenha mexido com CLI, você provavelmente deve conhecer o termo aliases, se não, explicaremos para você: aliases são comandos personalizados que contém vários outros comandos dentro dele mesmo. Isso é, são atalhos que você pode criar e simplificar as suas tarefas no dia a dia. 
+    
+    Com o git config, temos a possibilidade de criar vários aliases nele. Isso porque todos esses comandos novos são armazenados no arquivo de configuração do Git. Com isso em mente, ensinaremos para você os comandos básicos para a criação de novos atalhos:
+    
+    git config --global alias.ci commit
+    
+    Nesse exemplo criamos um novo comando git ci que facilita a execução de futuros comandos envolvendo o commit, vamos ver um exemplo na prática:
+    Exemplo de uso do comando git ci
+    
+    Nesse caso, criamos o alias do commit e logo depois simulamos um novo arquivo no repositório. No fim, usamos o nosso atalho para facilitar a execução do commit.
+    
+    Você também pode criar novos comandos utilizando os atalhos já criados:
+    
+    git config --global alias.amend ci --amend
+    
+    Nesse exemplo, criamos um comando chamado amend que utiliza o já conhecido comando ci. Nesse caso, percebemos a força que o alias tem no Git.
+    
+    Alguns outros atalhos que podem ser úteis na sua rotina:
+    
+    git config --global alias.st status
+    git config --global alias.co checkout
+    git config --global alias.br branch
+    git config --global alias.df diff
+    git config --global alias.dfs "diff --stat"
+    git config --global alias.pom "pull origin master"
+    git config --global alias.pl pull
+    git config --global alias.ps push
+    
+    Configurações de cores do Git
+    
+    No Git temos o suporte para cores no terminal, o que nos facilita a compreensão da mensagem. Também conseguimos configurar essas cores por meio do comando git config.
+    
+    Se for de seu interesse, também é possível desabilitar as cores do Git. Para isso, apenas rode esse comando no seu terminal:
+    
+    git config --global color.ui false
+    
+    Se você se arrependeu de ter removido as cores, basta rodar o mesmo comando, porém, em vez de escrever false, escreva auto.
+    
+    git config --global color.ui auto
+    
+    Também podemos escolher algumas cores para esse comando, o Git suporta alguns tipos de valores:
+    
+        normal;
+        black;
+        red;
+        green;
+        yellow;
+        blue;
+        magenta;
+        cyan;
+        white.
+    
+    git config --global color.ui green
+    
+    No entanto, também podemos utilizar valores de cor ANSI 256 e hexadecimais, como #7321e8.
+    
+    git config --global color.ui #7321e8
+    
+    Um ponto de interesse é a questão de cores para novas linhas. Além de poder alterar qual cor, você vai querer demonstrar essa ação (color.diff.whitespace). Por fim, também temos muitas outras saídas de cores do Git. Para não alongar muito, eu recomendo você a olhar a documentação oficial dessa parte.
+    Defina sua ferramenta de Merge
+    
+    Quando se trabalha com muitas pessoas em um projeto grande, é normal haver algum tipo de conflito na hora de fazer o merge. Sendo assim, o Git tem a sua própria maneira de resolver os conflitos utilizando uma ferramenta que é bem comum em sistemas Unix. No entanto, se você não estiver satisfeito com essa ferramenta, o git config consegue alterá-la para algum programa externo.
+    
+    Vamos deixar aqui uma relação de ferramentas e os seus respectivos comandos no git config:
+    Definindo a ferramenta de merge
+    Opções para usar com Git Config
+    
+    Listaremos alguns comandos que podem ser úteis para você utilizar no dia a dia. Não mostraremos todos os comandos, no entanto, se for de seu interesse pode conferir essas informações na documentação oficial do git config.
+    
+    Vale ressaltar que, dependendo da sua versão do Git, é possível que alguns comandos não funcionem corretamente. Isso porque ele é sempre atualizado com novas funcionalidades e ajustes.
+    Liste todas as variáveis de configuração: -l –list
+    
+    Lista todas as variáveis e valores do arquivo de configuração do Git.
+    
+    git config -l
+    
+    Listando todas as variáveis de configuração git config
+    Edite rapidamente o arquivo de configuração: -e –edit
+    
+    Esse comando abre o editor de texto para editar o arquivo de configuração. Por padrão, ele tenta abrir o arquivo de configuração do repositório. Se você quiser, pode passar o comando –global ou –system para editar os respectivos arquivos.
+    
+    git config -e
+    
+    Mude todos os valores de um campo: –replace-all
+    
+    Se por acaso algum campo do seu arquivo de configuração tiver mais de um registro, com esse comando você consegue mudar todos os valores para o que você quiser.
+    
+    git config --replace-all user.name "Nome Teste"
+    
+    Remova uma chave de configuração: –unset
+    
+    Com esse comando, é possível apagar uma chave do seu arquivo de configuração rapidamente. Como mostrado logo abaixo, é feito a definição do nome do nosso usuário e logo depois, é feito a remoção:
+    
+    git config --global user.name "Teste"
+    
+    Apagando chaves de configuração
+    
+    Se você estava com dúvidas sobre esse poderoso comando do Git, espero que tenhamos conseguido saná-las. Além disso, mostramos configurações úteis para o uso no cotidiano e também para o seu trabalho. A utilidade principal desse comando é a versatilidade dele, permitindo a configuração de informações, atalhos, cores e até mesmo ferramentas de texto e merge. 
+    
+    O Git é uma ferramenta poderosíssima que contém muitos comandos. Se você mesmo depois de ter lido o post ficou curioso em saber mais sobre o git config, aconselho você a olhar a documentação oficial desse comando, pois, além de ser muito completa, contém explicações e exemplos muito simples.
+    
+    
+        Git push
+        Git rebase
+        Git commit
+        Git Flow
+    
+    
+
+    </body>
+</html>
