@@ -1,3 +1,4 @@
-## GIT-CMD
- https://BrunoSprint.github.io/GIT-CMD
+##GIT-CMD
+
+ https://BrunoSprint.github.io/GIT-CMD  
  Git commands used in various situations
